@@ -1,0 +1,1706 @@
+<?xml version="1.0"?>
+
+<!--
+-
+- Host: 127.0.0.1 (MySQL 5.7.17)
+- Database: AQI
+- Generation Time Time: 2017-04-20 07:53:44 +0000
+-
+-->
+
+<AQI>
+
+	<city_info>
+	<row>
+		<cityID>110000</cityID>
+		<cityName>北京市</cityName>
+	</row>
+
+	<row>
+		<cityID>120000</cityID>
+		<cityName>天津市</cityName>
+	</row>
+
+	<row>
+		<cityID>130100</cityID>
+		<cityName>石家庄市</cityName>
+	</row>
+
+	<row>
+		<cityID>130200</cityID>
+		<cityName>唐山市</cityName>
+	</row>
+
+	<row>
+		<cityID>130300</cityID>
+		<cityName>秦皇岛市</cityName>
+	</row>
+
+	<row>
+		<cityID>130400</cityID>
+		<cityName>邯郸市</cityName>
+	</row>
+
+	<row>
+		<cityID>130500</cityID>
+		<cityName>邢台市</cityName>
+	</row>
+
+	<row>
+		<cityID>130600</cityID>
+		<cityName>保定市</cityName>
+	</row>
+
+	<row>
+		<cityID>130800</cityID>
+		<cityName>承德市</cityName>
+	</row>
+
+	<row>
+		<cityID>130900</cityID>
+		<cityName>沧州市</cityName>
+	</row>
+
+	<row>
+		<cityID>131000</cityID>
+		<cityName>廊坊市</cityName>
+	</row>
+
+	<row>
+		<cityID>131100</cityID>
+		<cityName>衡水市</cityName>
+	</row>
+
+	<row>
+		<cityID>131200</cityID>
+		<cityName>张家口市</cityName>
+	</row>
+
+	<row>
+		<cityID>140100</cityID>
+		<cityName>太原市</cityName>
+	</row>
+
+	<row>
+		<cityID>140200</cityID>
+		<cityName>大同市</cityName>
+	</row>
+
+	<row>
+		<cityID>140300</cityID>
+		<cityName>阳泉市</cityName>
+	</row>
+
+	<row>
+		<cityID>140400</cityID>
+		<cityName>长治市</cityName>
+	</row>
+
+	<row>
+		<cityID>140500</cityID>
+		<cityName>晋城市</cityName>
+	</row>
+
+	<row>
+		<cityID>140600</cityID>
+		<cityName>朔州市</cityName>
+	</row>
+
+	<row>
+		<cityID>140700</cityID>
+		<cityName>晋中市</cityName>
+	</row>
+
+	<row>
+		<cityID>140800</cityID>
+		<cityName>运城市</cityName>
+	</row>
+
+	<row>
+		<cityID>140900</cityID>
+		<cityName>忻州市</cityName>
+	</row>
+
+	<row>
+		<cityID>141000</cityID>
+		<cityName>临汾市</cityName>
+	</row>
+
+	<row>
+		<cityID>141100</cityID>
+		<cityName>吕梁市</cityName>
+	</row>
+
+	<row>
+		<cityID>150100</cityID>
+		<cityName>呼和浩特市</cityName>
+	</row>
+
+	<row>
+		<cityID>150200</cityID>
+		<cityName>包头市</cityName>
+	</row>
+
+	<row>
+		<cityID>150300</cityID>
+		<cityName>乌海市</cityName>
+	</row>
+
+	<row>
+		<cityID>150400</cityID>
+		<cityName>赤峰市</cityName>
+	</row>
+
+	<row>
+		<cityID>150500</cityID>
+		<cityName>通辽市</cityName>
+	</row>
+
+	<row>
+		<cityID>150600</cityID>
+		<cityName>鄂尔多斯市</cityName>
+	</row>
+
+	<row>
+		<cityID>150700</cityID>
+		<cityName>呼伦贝尔市</cityName>
+	</row>
+
+	<row>
+		<cityID>150800</cityID>
+		<cityName>巴彦淖尔市</cityName>
+	</row>
+
+	<row>
+		<cityID>150900</cityID>
+		<cityName>乌兰察布市</cityName>
+	</row>
+
+	<row>
+		<cityID>152200</cityID>
+		<cityName>兴安盟</cityName>
+	</row>
+
+	<row>
+		<cityID>152500</cityID>
+		<cityName>锡林郭勒盟</cityName>
+	</row>
+
+	<row>
+		<cityID>152900</cityID>
+		<cityName>阿拉善盟</cityName>
+	</row>
+
+	<row>
+		<cityID>210100</cityID>
+		<cityName>沈阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>210200</cityID>
+		<cityName>大连市</cityName>
+	</row>
+
+	<row>
+		<cityID>210300</cityID>
+		<cityName>鞍山市</cityName>
+	</row>
+
+	<row>
+		<cityID>210400</cityID>
+		<cityName>抚顺市</cityName>
+	</row>
+
+	<row>
+		<cityID>210500</cityID>
+		<cityName>本溪市</cityName>
+	</row>
+
+	<row>
+		<cityID>210600</cityID>
+		<cityName>丹东市</cityName>
+	</row>
+
+	<row>
+		<cityID>210700</cityID>
+		<cityName>锦州市</cityName>
+	</row>
+
+	<row>
+		<cityID>210800</cityID>
+		<cityName>营口市</cityName>
+	</row>
+
+	<row>
+		<cityID>210900</cityID>
+		<cityName>阜新市</cityName>
+	</row>
+
+	<row>
+		<cityID>211000</cityID>
+		<cityName>辽阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>211100</cityID>
+		<cityName>盘锦市</cityName>
+	</row>
+
+	<row>
+		<cityID>211200</cityID>
+		<cityName>铁岭市</cityName>
+	</row>
+
+	<row>
+		<cityID>211300</cityID>
+		<cityName>朝阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>211400</cityID>
+		<cityName>葫芦岛市</cityName>
+	</row>
+
+	<row>
+		<cityID>220100</cityID>
+		<cityName>长春市</cityName>
+	</row>
+
+	<row>
+		<cityID>220200</cityID>
+		<cityName>吉林市</cityName>
+	</row>
+
+	<row>
+		<cityID>220300</cityID>
+		<cityName>四平市</cityName>
+	</row>
+
+	<row>
+		<cityID>220400</cityID>
+		<cityName>辽源市</cityName>
+	</row>
+
+	<row>
+		<cityID>220500</cityID>
+		<cityName>通化市</cityName>
+	</row>
+
+	<row>
+		<cityID>220600</cityID>
+		<cityName>白山市</cityName>
+	</row>
+
+	<row>
+		<cityID>220700</cityID>
+		<cityName>松原市</cityName>
+	</row>
+
+	<row>
+		<cityID>220800</cityID>
+		<cityName>白城市</cityName>
+	</row>
+
+	<row>
+		<cityID>222400</cityID>
+		<cityName>延边州</cityName>
+	</row>
+
+	<row>
+		<cityID>230100</cityID>
+		<cityName>哈尔滨市</cityName>
+	</row>
+
+	<row>
+		<cityID>230200</cityID>
+		<cityName>齐齐哈尔市</cityName>
+	</row>
+
+	<row>
+		<cityID>230300</cityID>
+		<cityName>鸡西市</cityName>
+	</row>
+
+	<row>
+		<cityID>230400</cityID>
+		<cityName>鹤岗市</cityName>
+	</row>
+
+	<row>
+		<cityID>230500</cityID>
+		<cityName>双鸭山市</cityName>
+	</row>
+
+	<row>
+		<cityID>230600</cityID>
+		<cityName>大庆市</cityName>
+	</row>
+
+	<row>
+		<cityID>230700</cityID>
+		<cityName>伊春市</cityName>
+	</row>
+
+	<row>
+		<cityID>230800</cityID>
+		<cityName>佳木斯市</cityName>
+	</row>
+
+	<row>
+		<cityID>230900</cityID>
+		<cityName>七台河市</cityName>
+	</row>
+
+	<row>
+		<cityID>231000</cityID>
+		<cityName>牡丹江市</cityName>
+	</row>
+
+	<row>
+		<cityID>231100</cityID>
+		<cityName>黑河市</cityName>
+	</row>
+
+	<row>
+		<cityID>231200</cityID>
+		<cityName>绥化市</cityName>
+	</row>
+
+	<row>
+		<cityID>232700</cityID>
+		<cityName>大兴安岭地区</cityName>
+	</row>
+
+	<row>
+		<cityID>310000</cityID>
+		<cityName>上海市</cityName>
+	</row>
+
+	<row>
+		<cityID>320100</cityID>
+		<cityName>南京市</cityName>
+	</row>
+
+	<row>
+		<cityID>320200</cityID>
+		<cityName>无锡市</cityName>
+	</row>
+
+	<row>
+		<cityID>320300</cityID>
+		<cityName>徐州市</cityName>
+	</row>
+
+	<row>
+		<cityID>320400</cityID>
+		<cityName>常州市</cityName>
+	</row>
+
+	<row>
+		<cityID>320500</cityID>
+		<cityName>苏州市</cityName>
+	</row>
+
+	<row>
+		<cityID>320600</cityID>
+		<cityName>南通市</cityName>
+	</row>
+
+	<row>
+		<cityID>320700</cityID>
+		<cityName>连云港市</cityName>
+	</row>
+
+	<row>
+		<cityID>320800</cityID>
+		<cityName>淮安市</cityName>
+	</row>
+
+	<row>
+		<cityID>320900</cityID>
+		<cityName>盐城市</cityName>
+	</row>
+
+	<row>
+		<cityID>321000</cityID>
+		<cityName>扬州市</cityName>
+	</row>
+
+	<row>
+		<cityID>321100</cityID>
+		<cityName>镇江市</cityName>
+	</row>
+
+	<row>
+		<cityID>321200</cityID>
+		<cityName>泰州市</cityName>
+	</row>
+
+	<row>
+		<cityID>321300</cityID>
+		<cityName>宿迁市</cityName>
+	</row>
+
+	<row>
+		<cityID>330100</cityID>
+		<cityName>杭州市</cityName>
+	</row>
+
+	<row>
+		<cityID>330200</cityID>
+		<cityName>宁波市</cityName>
+	</row>
+
+	<row>
+		<cityID>330300</cityID>
+		<cityName>温州市</cityName>
+	</row>
+
+	<row>
+		<cityID>330400</cityID>
+		<cityName>嘉兴市</cityName>
+	</row>
+
+	<row>
+		<cityID>330500</cityID>
+		<cityName>湖州市</cityName>
+	</row>
+
+	<row>
+		<cityID>330700</cityID>
+		<cityName>金华市</cityName>
+	</row>
+
+	<row>
+		<cityID>330800</cityID>
+		<cityName>衢州市</cityName>
+	</row>
+
+	<row>
+		<cityID>330900</cityID>
+		<cityName>舟山市</cityName>
+	</row>
+
+	<row>
+		<cityID>331000</cityID>
+		<cityName>台州市</cityName>
+	</row>
+
+	<row>
+		<cityID>331100</cityID>
+		<cityName>丽水市</cityName>
+	</row>
+
+	<row>
+		<cityID>331300</cityID>
+		<cityName>绍兴市</cityName>
+	</row>
+
+	<row>
+		<cityID>340100</cityID>
+		<cityName>合肥市</cityName>
+	</row>
+
+	<row>
+		<cityID>340200</cityID>
+		<cityName>芜湖市</cityName>
+	</row>
+
+	<row>
+		<cityID>340300</cityID>
+		<cityName>蚌埠市</cityName>
+	</row>
+
+	<row>
+		<cityID>340400</cityID>
+		<cityName>淮南市</cityName>
+	</row>
+
+	<row>
+		<cityID>340500</cityID>
+		<cityName>马鞍山市</cityName>
+	</row>
+
+	<row>
+		<cityID>340600</cityID>
+		<cityName>淮北市</cityName>
+	</row>
+
+	<row>
+		<cityID>340700</cityID>
+		<cityName>铜陵市</cityName>
+	</row>
+
+	<row>
+		<cityID>340800</cityID>
+		<cityName>安庆市</cityName>
+	</row>
+
+	<row>
+		<cityID>341000</cityID>
+		<cityName>黄山市</cityName>
+	</row>
+
+	<row>
+		<cityID>341100</cityID>
+		<cityName>滁州市</cityName>
+	</row>
+
+	<row>
+		<cityID>341200</cityID>
+		<cityName>阜阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>341300</cityID>
+		<cityName>宿州市</cityName>
+	</row>
+
+	<row>
+		<cityID>341500</cityID>
+		<cityName>六安市</cityName>
+	</row>
+
+	<row>
+		<cityID>341600</cityID>
+		<cityName>亳州市</cityName>
+	</row>
+
+	<row>
+		<cityID>341700</cityID>
+		<cityName>池州市</cityName>
+	</row>
+
+	<row>
+		<cityID>341800</cityID>
+		<cityName>宣城市</cityName>
+	</row>
+
+	<row>
+		<cityID>350100</cityID>
+		<cityName>福州市</cityName>
+	</row>
+
+	<row>
+		<cityID>350200</cityID>
+		<cityName>厦门市</cityName>
+	</row>
+
+	<row>
+		<cityID>350300</cityID>
+		<cityName>莆田市</cityName>
+	</row>
+
+	<row>
+		<cityID>350400</cityID>
+		<cityName>三明市</cityName>
+	</row>
+
+	<row>
+		<cityID>350500</cityID>
+		<cityName>泉州市</cityName>
+	</row>
+
+	<row>
+		<cityID>350600</cityID>
+		<cityName>漳州市</cityName>
+	</row>
+
+	<row>
+		<cityID>350700</cityID>
+		<cityName>南平市</cityName>
+	</row>
+
+	<row>
+		<cityID>350800</cityID>
+		<cityName>龙岩市</cityName>
+	</row>
+
+	<row>
+		<cityID>350900</cityID>
+		<cityName>宁德市</cityName>
+	</row>
+
+	<row>
+		<cityID>360100</cityID>
+		<cityName>南昌市</cityName>
+	</row>
+
+	<row>
+		<cityID>360200</cityID>
+		<cityName>景德镇市</cityName>
+	</row>
+
+	<row>
+		<cityID>360300</cityID>
+		<cityName>萍乡市</cityName>
+	</row>
+
+	<row>
+		<cityID>360400</cityID>
+		<cityName>九江市</cityName>
+	</row>
+
+	<row>
+		<cityID>360500</cityID>
+		<cityName>新余市</cityName>
+	</row>
+
+	<row>
+		<cityID>360600</cityID>
+		<cityName>鹰潭市</cityName>
+	</row>
+
+	<row>
+		<cityID>360700</cityID>
+		<cityName>赣州市</cityName>
+	</row>
+
+	<row>
+		<cityID>360800</cityID>
+		<cityName>吉安市</cityName>
+	</row>
+
+	<row>
+		<cityID>360900</cityID>
+		<cityName>宜春市</cityName>
+	</row>
+
+	<row>
+		<cityID>361000</cityID>
+		<cityName>抚州市</cityName>
+	</row>
+
+	<row>
+		<cityID>361100</cityID>
+		<cityName>上饶市</cityName>
+	</row>
+
+	<row>
+		<cityID>370100</cityID>
+		<cityName>济南市</cityName>
+	</row>
+
+	<row>
+		<cityID>370200</cityID>
+		<cityName>青岛市</cityName>
+	</row>
+
+	<row>
+		<cityID>370300</cityID>
+		<cityName>淄博市</cityName>
+	</row>
+
+	<row>
+		<cityID>370400</cityID>
+		<cityName>枣庄市</cityName>
+	</row>
+
+	<row>
+		<cityID>370500</cityID>
+		<cityName>东营市</cityName>
+	</row>
+
+	<row>
+		<cityID>370600</cityID>
+		<cityName>烟台市</cityName>
+	</row>
+
+	<row>
+		<cityID>370700</cityID>
+		<cityName>潍坊市</cityName>
+	</row>
+
+	<row>
+		<cityID>370800</cityID>
+		<cityName>济宁市</cityName>
+	</row>
+
+	<row>
+		<cityID>370900</cityID>
+		<cityName>泰安市</cityName>
+	</row>
+
+	<row>
+		<cityID>371000</cityID>
+		<cityName>威海市</cityName>
+	</row>
+
+	<row>
+		<cityID>371100</cityID>
+		<cityName>日照市</cityName>
+	</row>
+
+	<row>
+		<cityID>371200</cityID>
+		<cityName>莱芜市</cityName>
+	</row>
+
+	<row>
+		<cityID>371300</cityID>
+		<cityName>临沂市</cityName>
+	</row>
+
+	<row>
+		<cityID>371400</cityID>
+		<cityName>德州市</cityName>
+	</row>
+
+	<row>
+		<cityID>371500</cityID>
+		<cityName>聊城市</cityName>
+	</row>
+
+	<row>
+		<cityID>371600</cityID>
+		<cityName>滨州市</cityName>
+	</row>
+
+	<row>
+		<cityID>371700</cityID>
+		<cityName>菏泽市</cityName>
+	</row>
+
+	<row>
+		<cityID>410100</cityID>
+		<cityName>郑州市</cityName>
+	</row>
+
+	<row>
+		<cityID>410200</cityID>
+		<cityName>开封市</cityName>
+	</row>
+
+	<row>
+		<cityID>410300</cityID>
+		<cityName>洛阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>410400</cityID>
+		<cityName>平顶山市</cityName>
+	</row>
+
+	<row>
+		<cityID>410500</cityID>
+		<cityName>安阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>410600</cityID>
+		<cityName>鹤壁市</cityName>
+	</row>
+
+	<row>
+		<cityID>410700</cityID>
+		<cityName>新乡市</cityName>
+	</row>
+
+	<row>
+		<cityID>410800</cityID>
+		<cityName>焦作市</cityName>
+	</row>
+
+	<row>
+		<cityID>410900</cityID>
+		<cityName>濮阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>411000</cityID>
+		<cityName>许昌市</cityName>
+	</row>
+
+	<row>
+		<cityID>411100</cityID>
+		<cityName>漯河市</cityName>
+	</row>
+
+	<row>
+		<cityID>411200</cityID>
+		<cityName>三门峡市</cityName>
+	</row>
+
+	<row>
+		<cityID>411300</cityID>
+		<cityName>南阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>411400</cityID>
+		<cityName>商丘市</cityName>
+	</row>
+
+	<row>
+		<cityID>411500</cityID>
+		<cityName>信阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>411600</cityID>
+		<cityName>周口市</cityName>
+	</row>
+
+	<row>
+		<cityID>411700</cityID>
+		<cityName>驻马店市</cityName>
+	</row>
+
+	<row>
+		<cityID>420100</cityID>
+		<cityName>武汉市</cityName>
+	</row>
+
+	<row>
+		<cityID>420200</cityID>
+		<cityName>黄石市</cityName>
+	</row>
+
+	<row>
+		<cityID>420300</cityID>
+		<cityName>十堰市</cityName>
+	</row>
+
+	<row>
+		<cityID>420500</cityID>
+		<cityName>宜昌市</cityName>
+	</row>
+
+	<row>
+		<cityID>420600</cityID>
+		<cityName>襄阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>420700</cityID>
+		<cityName>鄂州市</cityName>
+	</row>
+
+	<row>
+		<cityID>420800</cityID>
+		<cityName>荆门市</cityName>
+	</row>
+
+	<row>
+		<cityID>420900</cityID>
+		<cityName>孝感市</cityName>
+	</row>
+
+	<row>
+		<cityID>421000</cityID>
+		<cityName>荆州市</cityName>
+	</row>
+
+	<row>
+		<cityID>421100</cityID>
+		<cityName>黄冈市</cityName>
+	</row>
+
+	<row>
+		<cityID>421200</cityID>
+		<cityName>咸宁市</cityName>
+	</row>
+
+	<row>
+		<cityID>421300</cityID>
+		<cityName>随州市</cityName>
+	</row>
+
+	<row>
+		<cityID>422800</cityID>
+		<cityName>恩施州</cityName>
+	</row>
+
+	<row>
+		<cityID>430100</cityID>
+		<cityName>长沙市</cityName>
+	</row>
+
+	<row>
+		<cityID>430200</cityID>
+		<cityName>株洲市</cityName>
+	</row>
+
+	<row>
+		<cityID>430300</cityID>
+		<cityName>湘潭市</cityName>
+	</row>
+
+	<row>
+		<cityID>430400</cityID>
+		<cityName>衡阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>430500</cityID>
+		<cityName>邵阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>430600</cityID>
+		<cityName>岳阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>430700</cityID>
+		<cityName>常德市</cityName>
+	</row>
+
+	<row>
+		<cityID>430800</cityID>
+		<cityName>张家界市</cityName>
+	</row>
+
+	<row>
+		<cityID>430900</cityID>
+		<cityName>益阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>431000</cityID>
+		<cityName>郴州市</cityName>
+	</row>
+
+	<row>
+		<cityID>431100</cityID>
+		<cityName>永州市</cityName>
+	</row>
+
+	<row>
+		<cityID>431200</cityID>
+		<cityName>怀化市</cityName>
+	</row>
+
+	<row>
+		<cityID>431300</cityID>
+		<cityName>娄底市</cityName>
+	</row>
+
+	<row>
+		<cityID>433100</cityID>
+		<cityName>湘西州</cityName>
+	</row>
+
+	<row>
+		<cityID>440100</cityID>
+		<cityName>广州市</cityName>
+	</row>
+
+	<row>
+		<cityID>440200</cityID>
+		<cityName>韶关市</cityName>
+	</row>
+
+	<row>
+		<cityID>440300</cityID>
+		<cityName>深圳市</cityName>
+	</row>
+
+	<row>
+		<cityID>440400</cityID>
+		<cityName>珠海市</cityName>
+	</row>
+
+	<row>
+		<cityID>440500</cityID>
+		<cityName>汕头市</cityName>
+	</row>
+
+	<row>
+		<cityID>440600</cityID>
+		<cityName>佛山市</cityName>
+	</row>
+
+	<row>
+		<cityID>440700</cityID>
+		<cityName>江门市</cityName>
+	</row>
+
+	<row>
+		<cityID>440800</cityID>
+		<cityName>湛江市</cityName>
+	</row>
+
+	<row>
+		<cityID>440900</cityID>
+		<cityName>茂名市</cityName>
+	</row>
+
+	<row>
+		<cityID>441200</cityID>
+		<cityName>肇庆市</cityName>
+	</row>
+
+	<row>
+		<cityID>441300</cityID>
+		<cityName>惠州市</cityName>
+	</row>
+
+	<row>
+		<cityID>441400</cityID>
+		<cityName>梅州市</cityName>
+	</row>
+
+	<row>
+		<cityID>441500</cityID>
+		<cityName>汕尾市</cityName>
+	</row>
+
+	<row>
+		<cityID>441600</cityID>
+		<cityName>河源市</cityName>
+	</row>
+
+	<row>
+		<cityID>441700</cityID>
+		<cityName>阳江市</cityName>
+	</row>
+
+	<row>
+		<cityID>441800</cityID>
+		<cityName>清远市</cityName>
+	</row>
+
+	<row>
+		<cityID>441900</cityID>
+		<cityName>东莞市</cityName>
+	</row>
+
+	<row>
+		<cityID>442000</cityID>
+		<cityName>中山市</cityName>
+	</row>
+
+	<row>
+		<cityID>445100</cityID>
+		<cityName>潮州市</cityName>
+	</row>
+
+	<row>
+		<cityID>445200</cityID>
+		<cityName>揭阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>445300</cityID>
+		<cityName>云浮市</cityName>
+	</row>
+
+	<row>
+		<cityID>450100</cityID>
+		<cityName>南宁市</cityName>
+	</row>
+
+	<row>
+		<cityID>450200</cityID>
+		<cityName>柳州市</cityName>
+	</row>
+
+	<row>
+		<cityID>450300</cityID>
+		<cityName>桂林市</cityName>
+	</row>
+
+	<row>
+		<cityID>450400</cityID>
+		<cityName>梧州市</cityName>
+	</row>
+
+	<row>
+		<cityID>450500</cityID>
+		<cityName>北海市</cityName>
+	</row>
+
+	<row>
+		<cityID>450600</cityID>
+		<cityName>防城港市</cityName>
+	</row>
+
+	<row>
+		<cityID>450700</cityID>
+		<cityName>钦州市</cityName>
+	</row>
+
+	<row>
+		<cityID>450800</cityID>
+		<cityName>贵港市</cityName>
+	</row>
+
+	<row>
+		<cityID>450900</cityID>
+		<cityName>玉林市</cityName>
+	</row>
+
+	<row>
+		<cityID>451000</cityID>
+		<cityName>百色市</cityName>
+	</row>
+
+	<row>
+		<cityID>451100</cityID>
+		<cityName>贺州市</cityName>
+	</row>
+
+	<row>
+		<cityID>451200</cityID>
+		<cityName>河池市</cityName>
+	</row>
+
+	<row>
+		<cityID>451300</cityID>
+		<cityName>来宾市</cityName>
+	</row>
+
+	<row>
+		<cityID>451400</cityID>
+		<cityName>崇左市</cityName>
+	</row>
+
+	<row>
+		<cityID>460100</cityID>
+		<cityName>海口市</cityName>
+	</row>
+
+	<row>
+		<cityID>460200</cityID>
+		<cityName>三亚市</cityName>
+	</row>
+
+	<row>
+		<cityID>500000</cityID>
+		<cityName>重庆市</cityName>
+	</row>
+
+	<row>
+		<cityID>510100</cityID>
+		<cityName>成都市</cityName>
+	</row>
+
+	<row>
+		<cityID>510300</cityID>
+		<cityName>自贡市</cityName>
+	</row>
+
+	<row>
+		<cityID>510400</cityID>
+		<cityName>攀枝花市</cityName>
+	</row>
+
+	<row>
+		<cityID>510500</cityID>
+		<cityName>泸州市</cityName>
+	</row>
+
+	<row>
+		<cityID>510600</cityID>
+		<cityName>德阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>510700</cityID>
+		<cityName>绵阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>510800</cityID>
+		<cityName>广元市</cityName>
+	</row>
+
+	<row>
+		<cityID>510900</cityID>
+		<cityName>遂宁市</cityName>
+	</row>
+
+	<row>
+		<cityID>511000</cityID>
+		<cityName>内江市</cityName>
+	</row>
+
+	<row>
+		<cityID>511100</cityID>
+		<cityName>乐山市</cityName>
+	</row>
+
+	<row>
+		<cityID>511300</cityID>
+		<cityName>南充市</cityName>
+	</row>
+
+	<row>
+		<cityID>511400</cityID>
+		<cityName>眉山市</cityName>
+	</row>
+
+	<row>
+		<cityID>511500</cityID>
+		<cityName>宜宾市</cityName>
+	</row>
+
+	<row>
+		<cityID>511600</cityID>
+		<cityName>广安市</cityName>
+	</row>
+
+	<row>
+		<cityID>511700</cityID>
+		<cityName>达州市</cityName>
+	</row>
+
+	<row>
+		<cityID>511800</cityID>
+		<cityName>雅安市</cityName>
+	</row>
+
+	<row>
+		<cityID>511900</cityID>
+		<cityName>巴中市</cityName>
+	</row>
+
+	<row>
+		<cityID>512000</cityID>
+		<cityName>资阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>513200</cityID>
+		<cityName>阿坝州</cityName>
+	</row>
+
+	<row>
+		<cityID>513300</cityID>
+		<cityName>甘孜州</cityName>
+	</row>
+
+	<row>
+		<cityID>513400</cityID>
+		<cityName>凉山州</cityName>
+	</row>
+
+	<row>
+		<cityID>520100</cityID>
+		<cityName>贵阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>520200</cityID>
+		<cityName>六盘水市</cityName>
+	</row>
+
+	<row>
+		<cityID>520300</cityID>
+		<cityName>遵义市</cityName>
+	</row>
+
+	<row>
+		<cityID>520400</cityID>
+		<cityName>安顺市</cityName>
+	</row>
+
+	<row>
+		<cityID>522200</cityID>
+		<cityName>铜仁地区</cityName>
+	</row>
+
+	<row>
+		<cityID>522300</cityID>
+		<cityName>黔西南州</cityName>
+	</row>
+
+	<row>
+		<cityID>522400</cityID>
+		<cityName>毕节市</cityName>
+	</row>
+
+	<row>
+		<cityID>522600</cityID>
+		<cityName>黔东南州</cityName>
+	</row>
+
+	<row>
+		<cityID>522700</cityID>
+		<cityName>黔南州</cityName>
+	</row>
+
+	<row>
+		<cityID>530100</cityID>
+		<cityName>昆明市</cityName>
+	</row>
+
+	<row>
+		<cityID>530300</cityID>
+		<cityName>曲靖市</cityName>
+	</row>
+
+	<row>
+		<cityID>530400</cityID>
+		<cityName>玉溪市</cityName>
+	</row>
+
+	<row>
+		<cityID>530500</cityID>
+		<cityName>保山市</cityName>
+	</row>
+
+	<row>
+		<cityID>530600</cityID>
+		<cityName>昭通市</cityName>
+	</row>
+
+	<row>
+		<cityID>530700</cityID>
+		<cityName>丽江市</cityName>
+	</row>
+
+	<row>
+		<cityID>530800</cityID>
+		<cityName>普洱市</cityName>
+	</row>
+
+	<row>
+		<cityID>530900</cityID>
+		<cityName>临沧市</cityName>
+	</row>
+
+	<row>
+		<cityID>532301</cityID>
+		<cityName>楚雄州</cityName>
+	</row>
+
+	<row>
+		<cityID>532522</cityID>
+		<cityName>红河州</cityName>
+	</row>
+
+	<row>
+		<cityID>532621</cityID>
+		<cityName>文山州</cityName>
+	</row>
+
+	<row>
+		<cityID>532801</cityID>
+		<cityName>西双版纳州</cityName>
+	</row>
+
+	<row>
+		<cityID>532901</cityID>
+		<cityName>大理州</cityName>
+	</row>
+
+	<row>
+		<cityID>533103</cityID>
+		<cityName>德宏州</cityName>
+	</row>
+
+	<row>
+		<cityID>533321</cityID>
+		<cityName>怒江州</cityName>
+	</row>
+
+	<row>
+		<cityID>533421</cityID>
+		<cityName>迪庆州</cityName>
+	</row>
+
+	<row>
+		<cityID>540100</cityID>
+		<cityName>拉萨市</cityName>
+	</row>
+
+	<row>
+		<cityID>542100</cityID>
+		<cityName>昌都地区</cityName>
+	</row>
+
+	<row>
+		<cityID>542200</cityID>
+		<cityName>山南地区</cityName>
+	</row>
+
+	<row>
+		<cityID>542300</cityID>
+		<cityName>日喀则地区</cityName>
+	</row>
+
+	<row>
+		<cityID>542400</cityID>
+		<cityName>那曲地区</cityName>
+	</row>
+
+	<row>
+		<cityID>542500</cityID>
+		<cityName>阿里地区</cityName>
+	</row>
+
+	<row>
+		<cityID>542600</cityID>
+		<cityName>林芝地区</cityName>
+	</row>
+
+	<row>
+		<cityID>610100</cityID>
+		<cityName>西安市</cityName>
+	</row>
+
+	<row>
+		<cityID>610200</cityID>
+		<cityName>铜川市</cityName>
+	</row>
+
+	<row>
+		<cityID>610300</cityID>
+		<cityName>宝鸡市</cityName>
+	</row>
+
+	<row>
+		<cityID>610400</cityID>
+		<cityName>咸阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>610500</cityID>
+		<cityName>渭南市</cityName>
+	</row>
+
+	<row>
+		<cityID>610600</cityID>
+		<cityName>延安市</cityName>
+	</row>
+
+	<row>
+		<cityID>610700</cityID>
+		<cityName>汉中市</cityName>
+	</row>
+
+	<row>
+		<cityID>610800</cityID>
+		<cityName>榆林市</cityName>
+	</row>
+
+	<row>
+		<cityID>610900</cityID>
+		<cityName>安康市</cityName>
+	</row>
+
+	<row>
+		<cityID>611000</cityID>
+		<cityName>商洛市</cityName>
+	</row>
+
+	<row>
+		<cityID>620100</cityID>
+		<cityName>兰州市</cityName>
+	</row>
+
+	<row>
+		<cityID>620200</cityID>
+		<cityName>嘉峪关市</cityName>
+	</row>
+
+	<row>
+		<cityID>620300</cityID>
+		<cityName>金昌市</cityName>
+	</row>
+
+	<row>
+		<cityID>620400</cityID>
+		<cityName>白银市</cityName>
+	</row>
+
+	<row>
+		<cityID>620500</cityID>
+		<cityName>天水市</cityName>
+	</row>
+
+	<row>
+		<cityID>620600</cityID>
+		<cityName>武威市</cityName>
+	</row>
+
+	<row>
+		<cityID>620700</cityID>
+		<cityName>张掖市</cityName>
+	</row>
+
+	<row>
+		<cityID>620800</cityID>
+		<cityName>平凉市</cityName>
+	</row>
+
+	<row>
+		<cityID>620900</cityID>
+		<cityName>酒泉市</cityName>
+	</row>
+
+	<row>
+		<cityID>621000</cityID>
+		<cityName>庆阳市</cityName>
+	</row>
+
+	<row>
+		<cityID>621100</cityID>
+		<cityName>定西市</cityName>
+	</row>
+
+	<row>
+		<cityID>621200</cityID>
+		<cityName>陇南市</cityName>
+	</row>
+
+	<row>
+		<cityID>622900</cityID>
+		<cityName>临夏州</cityName>
+	</row>
+
+	<row>
+		<cityID>623000</cityID>
+		<cityName>甘南州</cityName>
+	</row>
+
+	<row>
+		<cityID>630100</cityID>
+		<cityName>西宁市</cityName>
+	</row>
+
+	<row>
+		<cityID>632100</cityID>
+		<cityName>海东地区</cityName>
+	</row>
+
+	<row>
+		<cityID>632200</cityID>
+		<cityName>海北州</cityName>
+	</row>
+
+	<row>
+		<cityID>632300</cityID>
+		<cityName>黄南州</cityName>
+	</row>
+
+	<row>
+		<cityID>632500</cityID>
+		<cityName>海南州</cityName>
+	</row>
+
+	<row>
+		<cityID>632600</cityID>
+		<cityName>果洛州</cityName>
+	</row>
+
+	<row>
+		<cityID>632700</cityID>
+		<cityName>玉树州</cityName>
+	</row>
+
+	<row>
+		<cityID>632800</cityID>
+		<cityName>海西州</cityName>
+	</row>
+
+	<row>
+		<cityID>640100</cityID>
+		<cityName>银川市</cityName>
+	</row>
+
+	<row>
+		<cityID>640200</cityID>
+		<cityName>石嘴山市</cityName>
+	</row>
+
+	<row>
+		<cityID>640300</cityID>
+		<cityName>吴忠市</cityName>
+	</row>
+
+	<row>
+		<cityID>640400</cityID>
+		<cityName>固原市</cityName>
+	</row>
+
+	<row>
+		<cityID>640500</cityID>
+		<cityName>中卫市</cityName>
+	</row>
+
+	<row>
+		<cityID>650100</cityID>
+		<cityName>乌鲁木齐市</cityName>
+	</row>
+
+	<row>
+		<cityID>650200</cityID>
+		<cityName>克拉玛依市</cityName>
+	</row>
+
+	<row>
+		<cityID>652100</cityID>
+		<cityName>吐鲁番地区</cityName>
+	</row>
+
+	<row>
+		<cityID>652200</cityID>
+		<cityName>哈密地区</cityName>
+	</row>
+
+	<row>
+		<cityID>652300</cityID>
+		<cityName>昌吉州</cityName>
+	</row>
+
+	<row>
+		<cityID>652700</cityID>
+		<cityName>博州</cityName>
+	</row>
+
+	<row>
+		<cityID>652800</cityID>
+		<cityName>库尔勒市</cityName>
+	</row>
+
+	<row>
+		<cityID>652900</cityID>
+		<cityName>阿克苏地区</cityName>
+	</row>
+
+	<row>
+		<cityID>653000</cityID>
+		<cityName>克州</cityName>
+	</row>
+
+	<row>
+		<cityID>653100</cityID>
+		<cityName>喀什地区</cityName>
+	</row>
+
+	<row>
+		<cityID>653200</cityID>
+		<cityName>和田地区</cityName>
+	</row>
+
+	<row>
+		<cityID>654000</cityID>
+		<cityName>伊犁哈萨克州</cityName>
+	</row>
+
+	<row>
+		<cityID>654200</cityID>
+		<cityName>塔城地区</cityName>
+	</row>
+
+	<row>
+		<cityID>654300</cityID>
+		<cityName>阿勒泰地区</cityName>
+	</row>
+
+	<row>
+		<cityID>659001</cityID>
+		<cityName>石河子市</cityName>
+	</row>
+
+	<row>
+		<cityID>659004</cityID>
+		<cityName>五家渠市</cityName>
+	</row>
+
+	</city_info>
+
+</AQI>
