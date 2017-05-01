@@ -17,7 +17,7 @@ var client = redis.createClient('6379','127.0.0.1');
 var mysqlPool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'xxxxxx',
+    password: 'zh20110612',
     database: 'AQI'
 });
 
@@ -61,11 +61,41 @@ mysqlPool.getConnection(function (err, connection) {
 });
 
 // Test Area
+// 搜索
+
+// 省份搜索
+// req {pid: xx}
+router.post('/search/province', function (req, res) {
+    var pid = req.body['pid'];
+    res.setHeader("Content-Type", "application/json");
+    client.get("province_" + pid, function (err, result) {
+        if (result !== null) {
+            res.send('{ "ProvinceID": '+pid+',"Detail": '+ result + '}');
+        } else {
+            res.send('{"error_info": ' + '"There are something wrong happened in servers"' + '}');
+        }
+    })
+});
+
+// 城市搜索
+// req {CityID: xx}
+router.post('/search/city', function (req, res) {
+    var cityID = req.body['CityID'];
+    res.setHeader("Content-Type", "application/json");
+    client.get("city_" + cityID, function (err, result) {
+        if (result !== null) {
+            res.send('{ "CityID": '+cityID+',"Detail": '+ result + '}');
+        } else {
+            res.send('{"error_info": ' + '"There are something wrong happened in servers"' + '}');
+        }
+    })
+});
 
 // 站点实时信息
 // req {SiteID: xx, SiteName: xx}
 router.post('/site/latest', function (req, res) {
     var siteID = req.body['SiteID'];
+    res.setHeader("Content-Type", "application/json");
     client.get(siteID, function (err, result) {
         if (err) {
             res.send('{"error_info": '+'"There are something wrong happened in servers"'+'}');
@@ -107,7 +137,7 @@ router.post('/site/latest', function (req, res) {
                         });
                     }
                 });
-            })
+            });
         }
     });
 });
@@ -128,6 +158,8 @@ router.post('/latest', function (req, res) {
         method: 'GET'
     };
 
+    res.setHeader("Content-Type", "application/json");
+
     var request = http.request(options, function (response) {
         response.on('data' ,function (chunk) {
             var json = JSON.parse(chunk.toString());
@@ -144,9 +176,9 @@ router.post('/latest', function (req, res) {
                     var re_json = '';
                     client.get('ut_'+city, function (err, cityID) {
                         client.get(cityID,function (err, cityInfo) {
-                            re_json += '{ "nearby": [{"CityID": "'+cityID+'", "Detail": '+cityInfo+'},';
+                            re_json += '{ "nearby": [ '+cityInfo+',';
                             client.get(site_id, function (err, siteInfo) {
-                                re_json += '{"StationID": "'+site_id+'", "Detail": '+siteInfo+'}]}';
+                                re_json += siteInfo+']}';
                                 res.send(re_json);
                             });
                         });
@@ -166,10 +198,11 @@ router.post('/latest', function (req, res) {
 // req {SiteID: xx, SiteName: xx}
 router.post('/site/24h', function (req, res) {
     var siteID = req.body['SiteID'];
+    res.setHeader("Content-Type", "application/json");
     client.lrange(siteID+'_24h','0','-1',  function (err, result) {
         if (err) {
             res.send('{"error_info": "There are something wrong happened in servers"}');
-        } else if (result != null) {
+        } else if (result !== null) {
             // reply['SiteName'] = site;
             res.send('{"SiteCode" : "'+siteID+'", "Detail": ['+result+']}');
         } else {
@@ -201,10 +234,10 @@ router.post('/site/24h', function (req, res) {
                             if (client.llen(siteID+'_24h') >= 24) {
                                 client.rpop(siteID+'_24h')
                             }
-                        })
+                        });
                     }
-                })
-            })
+                });
+            });
         }
     });
 });
@@ -212,68 +245,70 @@ router.post('/site/24h', function (req, res) {
 
 // 城市所有站点最新信息
 // req {CityID: xx, CityName: xx}
-router.post('/city/allsites', function (req, res) {
-    var cityID = req.body['CityID'];
-    client.get(cityID+'_allsite', function (err, result) {
-        if (err) {
-            res.send('{"error_info": '+'"There are something wrong happened in servers"'+'}');
-        } else if (result != null) {
-            res.send(result);
-        } else {
-            client.get(cityID, function (err, reply) {
-                var city = reply;
-                mysqlPool.getConnection(function (err, connection) {
-                    connection.query("select * from site_info where city = '"+city+"'", function (err, rows) {
-                        connection.release();
-                        if (rows) {
-                            var time, nowDay, nowYD, nowTime, site_sql, id;
-
-                            async.map(rows, function (item, callback) {
-                                mysqlPool.getConnection(function (err, con) {
-                                    time = moment(Date.now());
-                                    nowDay = time.format('D');
-                                    nowYD = time.format('YYYYMM');
-                                    nowTime = time.format('YYYY-MM-DD HH') + ':00:00';
-                                    site_sql = "select * from site_table_"+nowYD+" partition (p"+nowDay+") where time = '"+nowTime+"' && siteID = '";
-                                    id = item.siteID;
-                                    con.query(site_sql+id+"'", function (err, reply) {
-                                        con.release();
-                                        if (!isObjectEmpty(reply)) {
-                                            var temp_dict = reply[0];
-                                            client.hmget('s'+id, 'City', 'Latitude', 'Longitude', function (err, other) {
-                                                temp_dict['Area'] = other[0];
-                                                temp_dict['Latitude'] = other[1];
-                                                temp_dict['Longitude'] = other[2];
-                                                temp_dict['StationCode'] = id;
-                                                temp_dict['Measure'] = air_me[temp_dict['Quality']]['measure'];
-                                                temp_dict['Unhealthful'] = air_me[temp_dict['Quality']]['unhealthful'];
-                                                temp_dict['Time'] = nowTime;
-                                                var json = JSON.stringify(temp_dict);
-                                                callback(null, json);
-                                            });
-                                        }
-                                    });
-                                });
-                            }, function (err, results) {
-                                var data = '{"CityCode_AllSites" : '+cityID+', "Detail": '+results+'}';
-                                res.send(data);
-                                client.set(cityID+'_allsite', data);
-                            });
-                        }
-                    });
-                })
-            });
-        }
-    })
-
-
-});
+// router.post('/city/allsites', function (req, res) {
+//     var cityID = req.body['CityID'];
+//     res.setHeader("Content-Type", "application/json");
+//     client.get(cityID+'_allsite', function (err, result) {
+//         if (err) {
+//             res.send('{"error_info": '+'"There are something wrong happened in servers"'+'}');
+//         } else if (result !== null) {
+//             res.send(result);
+//         } else {
+//             client.get(cityID, function (err, reply) {
+//                 var city = reply;
+//                 mysqlPool.getConnection(function (err, connection) {
+//                     connection.query("select * from site_info where city = '"+city+"'", function (err, rows) {
+//                         connection.release();
+//                         if (rows) {
+//                             var time, nowDay, nowYD, nowTime, site_sql, id;
+//
+//                             async.map(rows, function (item, callback) {
+//                                 mysqlPool.getConnection(function (err, con) {
+//                                     time = moment(Date.now());
+//                                     nowDay = time.format('D');
+//                                     nowYD = time.format('YYYYMM');
+//                                     nowTime = time.format('YYYY-MM-DD HH') + ':00:00';
+//                                     site_sql = "select * from site_table_"+nowYD+" partition (p"+nowDay+") where time = '"+nowTime+"' && siteID = '";
+//                                     id = item.siteID;
+//                                     con.query(site_sql+id+"'", function (err, reply) {
+//                                         con.release();
+//                                         if (!isObjectEmpty(reply)) {
+//                                             var temp_dict = reply[0];
+//                                             client.hmget('s'+id, 'City', 'Latitude', 'Longitude', function (err, other) {
+//                                                 temp_dict['Area'] = other[0];
+//                                                 temp_dict['Latitude'] = other[1];
+//                                                 temp_dict['Longitude'] = other[2];
+//                                                 temp_dict['StationCode'] = id;
+//                                                 temp_dict['Measure'] = air_me[temp_dict['Quality']]['measure'];
+//                                                 temp_dict['Unhealthful'] = air_me[temp_dict['Quality']]['unhealthful'];
+//                                                 temp_dict['Time'] = nowTime;
+//                                                 var json = JSON.stringify(temp_dict);
+//                                                 callback(null, json);
+//                                             });
+//                                         }
+//                                     });
+//                                 });
+//                             }, function (err, results) {
+//                                 var data = '{"CityCode_AllSites" : '+cityID+', "Detail": '+results+'}';
+//                                 res.send(data);
+//                                 client.set(cityID+'_allsite', data);
+//                             });
+//                         }
+//                     });
+//                 });
+//             });
+//         }
+//     });
+//
+//
+// });
 
 
 // 城市实时信息
 // req {CityID: xx, CityName: xx}
 router.post('/city/latest', function (req, res) {
     var cityID = req.body['CityID'];
+    res.setHeader("Content-Type", "application/json");
     client.get(cityID, function (err, result) {
         if (err) {
             res.send('{"error_info": '+'"There are something wrong happened in servers"'+'}');
@@ -309,7 +344,7 @@ router.post('/city/latest', function (req, res) {
                         client.set(cityID, json);
                     }
                 });
-            })
+            });
         }
     });
 });
@@ -319,12 +354,12 @@ router.post('/city/latest', function (req, res) {
 // req {CityID: xx, CityName: xx}
 router.post('/city/month', function (req, res) {
     var cityID = req.body['CityID'];
-    console.log(cityID);
+    res.setHeader("Content-Type", "application/json");
     client.lrange(cityID+'_month','0','-1', function (err, result) {
         if (err) {
             res.send('{"error_info": "There are something wrong happened in servers"}');
-        } else if (result != null) {
-            res.send('{"CityCode" : "'+cityID+'", "Detail": '+result+'}');
+        } else if (result !== null) {
+            res.send('{"CityCode" : "'+cityID+'", "Detail": ['+result+']}');
         } else {
             mysqlPool.getConnection(function (err, connection) {
                 var time = moment(Date.now());
@@ -349,6 +384,49 @@ router.post('/city/month', function (req, res) {
                             var data = '{"CityCode" : '+cityID+', "Detail": '+results+'}';
                             res.send(data);
                             client.set(cityID+'_month', data);
+                        })
+                    }
+                })
+            })
+        }
+    });
+});
+
+
+// 城市最近24h信息
+// req {CityID: xx, CityName: xx}
+router.post('/city/24h', function (req, res) {
+    var cityID = req.body['CityID'];
+    res.setHeader("Content-Type", "application/json");
+    client.lrange(cityID+'_24h','0','-1', function (err, result) {
+        if (err) {
+            res.send('{"error_info": "There are something wrong happened in servers"}');
+        } else if (result !== null) {
+            res.send('{"CityCode" : "'+cityID+'", "Detail": ['+result+']}');
+        } else {
+            mysqlPool.getConnection(function (err, connection) {
+                var time = moment(Date.now());
+                var nowDay = time.format('D');
+                var nowYD = time.format('YYYYMM');
+                var nowTime = time.format('YYYY-MM-DD HH') + ':00:00';
+                connection.query("select * from city_rt_table_"+ nowYD+" partition (p"+nowDay+") where time between date_sub(NOW(),interval 1 day) and  NOW()  && cityID = '"+cityID+"'", function (rows) {
+                    connection.release();
+                    if (!isObjectEmpty(rows)) {
+                        async.map(rows, function (item, callback) {
+                            var temp = item;
+                            client.get('s'+cityID, function (err, result) {
+                                temp['cityName'] = result;
+                                temp['CityCode'] = cityID;
+                                temp['Measure'] = air_me[temp['Quality']]['measure'];
+                                temp['Unhealthful'] = air_me[temp['Quality']]['unhealthful'];
+                                temp['Time'] = nowTime;
+                                var json = JSON.stringify(temp);
+                                callback(null, json);
+                            })
+                        }, function (err, results) {
+                            var data = '{"CityCode" : '+cityID+', "Detail": '+results+'}';
+                            res.send(data);
+                            client.set(cityID+'_24h', data);
                         })
                     }
                 })
